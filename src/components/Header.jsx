@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,6 +11,24 @@ const Header = ({ scrollToAboutSection, scrollToResumeSection, scrollToHomeSecti
     const location = useLocation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeTab, setActiveTab] = useState("/");
+    const [inspectAttempts, setInspectAttempts] = useState(0);
+
+    useEffect(() => {
+        const handleContextMenu = e => {
+            e.preventDefault();
+            setInspectAttempts(inspectAttempts + 1);
+
+            if (inspectAttempts >= 3) {
+                alert("Stop trying to inspect!");
+            }
+        };
+
+        document.addEventListener("contextmenu", handleContextMenu);
+
+        return () => {
+            document.removeEventListener("contextmenu", handleContextMenu);
+        };
+    }, [inspectAttempts]);
 
 
     useEffect(() => {
@@ -31,7 +49,7 @@ const Header = ({ scrollToAboutSection, scrollToResumeSection, scrollToHomeSecti
                 }
             }
             if (isHomeActive) {
-                setActiveTab("/"); // Set activeTab to "/" to keep "Home" active
+                setActiveTab("/home"); // Set activeTab to "/" to keep "Home" active
             }
         };
 
@@ -40,6 +58,8 @@ const Header = ({ scrollToAboutSection, scrollToResumeSection, scrollToHomeSecti
             setIsScrolled(currentScrollPos > 0);
             findActiveSection();
         };
+
+        findActiveSection();
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);

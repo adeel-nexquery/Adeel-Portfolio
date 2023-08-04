@@ -241,7 +241,7 @@ a {
 }
 
 
-#resume {
+#resume , #loadMore{
   background: #1c2f50 !important;
   color: #fff;
   border-color: #1c2f50 !important;
@@ -255,14 +255,14 @@ a {
   width: fit-content;
 }
 
-#resume:hover {
+#resume:hover , #loadMore:hover {
   color: #fff !important;
   box-shadow: 8px 8px #2fb4ae;
   transition: .3s;
 }
 
 
-#resume:focus {
+#resume:focus , #loadMore:focus {
   color: #fff !important;
 }
 
@@ -924,7 +924,11 @@ a {
 
 @media (max-width: 991.98px) {
   .cdHeight {
-    max-height: 32rem !important;
+    max-height: 30rem !important;
     overflow: hidden;
   }
+}
+
+.card-body{
+  overflow-y: auto;
 }
