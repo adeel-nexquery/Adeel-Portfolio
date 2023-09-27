@@ -17,7 +17,6 @@ const Header = ({ scrollToAboutSection, scrollToResumeSection, scrollToHomeSecti
         const handleContextMenu = e => {
             e.preventDefault();
             setInspectAttempts(inspectAttempts + 1);
-
             if (inspectAttempts >= 3) {
                 alert("Stop trying to inspect!");
             }
