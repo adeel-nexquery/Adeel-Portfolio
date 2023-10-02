@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import ProgressBar from 'react-bootstrap/ProgressBar';
 import Nav from 'react-bootstrap/Nav';
 import ProgressBar from './ProgressBar';
-// import AdeelNaveed from './public/AdeelNaveed.pdf'
+
 
 const Profile = ({ resumeSectionRef }) => {
 
