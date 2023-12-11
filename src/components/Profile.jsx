@@ -66,14 +66,29 @@ const Profile = ({ resumeSectionRef }) => {
                                     fontWeight: "400",
                                     color: "#6c757d",
                                     fontStyle: "italic"
-                                }}>2022 - Present</small>
+                                }}>2022/06 - 2023/08</small>
                                 <p className='mt-1'>As a junior frontend developer, I possess hands-on experience in HTML, CSS,
                                     JavaScript, ReactJS, Bootstrap, Tailwind CSS, and Sass. My skill set enables
                                     me to create engaging and responsive user interfaces, contribute to web development
                                     projects, and continually expand my knowledge to deliver innovative digital solutions.</p>
                             </div>
+                            <div className='border-start border-2 border-primary ps-3'>
+                                <h3>Software Engineer</h3>
+                                <h6 className='mb-0'>UBL - United Bank Limited</h6>
+                                <small style={{
+                                    fontWeight: "400",
+                                    color: "#6c757d",
+                                    fontStyle: "italic"
+                                }}>2023/08 - Present</small>
+                                {/* <p className='mt-1'>As a junior frontend developer, I possess hands-on experience in HTML, CSS,
+                                    JavaScript, ReactJS, Bootstrap, Tailwind CSS, and Sass. My skill set enables
+                                    me to create engaging and responsive user interfaces, contribute to web development
+                                    projects, and continually expand my knowledge to deliver innovative digital solutions.</p> */}
+                            </div>
 
                         </div>
+
+                        
                     </div>
 
                 </div>
@@ -157,7 +172,7 @@ const Profile = ({ resumeSectionRef }) => {
                                         <ProgressBar label="Sass"
                                             visualParts={[
                                                 {
-                                                    percentage: "97%",
+                                                    percentage: "95%",
                                                     color: "#ecbf4f"
                                                 }
                                             ]} />

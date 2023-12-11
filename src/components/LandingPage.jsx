@@ -26,7 +26,7 @@ const LandingPage = ({ aboutSectionRef, resumeSectionRef, homeSectionRef , proje
                                 <p style={{ color: "#eaa62e", fontWeight: "700" }}>Hello! I AM</p>
                                 <h1 className='mb-3'>
                                     <Typewriter
-                                        className="my-5" // Add your desired class here
+                                        className="my-5" 
                                         options={{
                                             strings: ['Adeel Naveed', 'Front-End Web Developer'],
                                             autoStart: true,
